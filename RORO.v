@@ -11,14 +11,14 @@ module RORO(
         .instruccion(instruccionOp)
     );
 
-    ROma Roma(
-        .DirL(instruccionOp[7:4]),
-        .Data(c1)
+    ROM #(.FILENAME("Datos_ROma.txt")) Roma (
+    	.DirL(instruccionOp[7:4]),
+    	.Data(c1)
     );
 
-    ROmina Romina(
-        .DirL(instruccionOp[3:0]),
-        .Data(c2)
+    ROM #(.FILENAME("Datos_ROmina.txt")) Romina (
+    	.DirL(instruccionOp[3:0]),
+    	.Data(c2)
     );
 
     ALU Pablo(
